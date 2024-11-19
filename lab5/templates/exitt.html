@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exit Page</title>
+</head>
+<body>
+    <h1>Thank you for visiting</h1>
+    <p>Total time spent on the page: {{ total_time_spent_seconds }} seconds</p>
+    <p><a href="{{ url_for('home') }}">Go back to Home</a></p>
+    <p><a href="{{ url_for('reset_time') }}">Reset Time</a></p>
+</body>
+</html>

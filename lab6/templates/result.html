@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Analytics</title>
+</head>
+<body>
+    <h1>Web Analytics</h1>
+        <p>Total Visitors: {{ total_visits }}</p>
+        <p>Unique Visitors: {{ total_unique_visits }}</p>
+        <h2>Visitor IPs</h2>
+        <ul>
+        {% for ip in all_visits %}
+            <li>{{ ip }}</li>
+        {% endfor %}
+        </ul>
+        <p><a href="/">Go Back</a></p>
+</body>
+</html>
+        

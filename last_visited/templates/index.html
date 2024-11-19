@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Flask App</title>
+</head>
+<body>
+<h1>Welcome to the Flask App</h1>
+{% if last_visited %}
+<p>Last visited: {{ last_visited }}</p>
+{% else %}
+<p>This is your first visit.</p>
+{% endif %}
+<p>Page visits: {{ page_count }}</p>
+</body>
+</html>

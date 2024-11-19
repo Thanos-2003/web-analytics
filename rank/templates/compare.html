@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Competitors</title>
+</head>
+<body>
+    <h1>Comparison of Your Website and Competitors</h1>
+    <table border="1">
+        <tr>
+            <th>Website</th>
+            <th>Global Rank</th>
+            <th>Country Rank</th>
+            <th>Total Visitors</th>
+        </tr>
+        <tr>
+            <td>{{ data['your_website']['name'] }}</td>
+            <td>{{ data['your_website']['global_rank'] }}</td>
+            <td>{{ data['your_website']['country_rank'] }}</td>
+            <td>{{ data['your_website']['total_visitors'] }}</td>
+        </tr>
+        {% for competitor in data['competitors'] %}
+        <tr>
+            <td>{{ competitor['name'] }}</td>
+            <td>{{ competitor['global_rank'] }}</td>
+            <td>{{ competitor['country_rank'] }}</td>
+            <td>{{ competitor['total_visitors'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+    <nav>
+        <a href="{{ url_for('about', from_page='index') }}">About</a> |
+        <a href="{{ url_for('contact', from_page='index') }}">Contact</a> |
+        <a href="{{ url_for('stats') }}">Stats</a>
+    </nav>
+</body>
+</html>

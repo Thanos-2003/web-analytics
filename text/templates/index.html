@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+    <h2>Sentiment Analysis</h2>
+
+    <form action="/analyze" method="POST">
+        <textarea name="text" rows="4" cols="50" placeholder="Enter text here..."></textarea><br><br>
+        <input type="submit" value="Analyze Sentiment">
+    </form>
+
+    {% if sentiment %}
+        <h3>Sentiment Analysis Result: {{ sentiment }}</h3>
+    {% endif %}
+
+    <br><a href="/">Analyze Another Text</a>
+</body>
+</html>

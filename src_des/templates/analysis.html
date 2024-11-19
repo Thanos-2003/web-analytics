@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis</title>
+</head>
+<body>
+    <h1>Referral and Destination Analysis</h1>
+
+    <h2>Referrals (Income Sources)</h2>
+    <table border="1">
+        <tr>
+            <th>Referral Source</th>
+            <th>Number of Visits</th>
+        </tr>
+        {% for referrer, count in referrals.items() %}
+        <tr>
+            <td>{{ referrer }}</td>
+            <td>{{ count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Destinations (Outgoing Visits)</h2>
+    <table border="1">
+        <tr>
+            <th>Destination</th>
+            <th>Number of Outgoing Visits</th>
+        </tr>
+        {% for destination, count in destinations.items() %}
+        <tr>
+            <td>{{ destination }}</td>
+            <td>{{ count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>

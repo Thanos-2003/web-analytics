@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Type Details</title>
+</head>
+<body>
+    <h1>Device Type Details</h1>
+    <table border="1">
+        <tr>
+            <th>URL</th>
+            <th>User Agent</th>
+            <th>Device Type</th>
+        </tr>
+        {% for data in device_data %}
+        <tr>
+            <td>{{ data['url'] }}</td>
+            <td>{{ data['user_agent'] }}</td>
+            <td>{{ data['device_type'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

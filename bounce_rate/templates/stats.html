@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stats</title>
+</head>
+<body>
+    <h1>Site Metrics</h1>
+    <p>Total Visits: {{ total_visits }}</p>
+    <p>Bounce Rate: {{ bounce_rate }}%</p>
+    
+    <h2>Exit Rates by Page</h2>
+    <ul>
+        {% for page, rate in exit_rates.items() %}
+            <li>{{ page }}: {{ rate }}%</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
